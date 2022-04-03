@@ -1,0 +1,5 @@
+<% frame_id = dom_id(post, "title_to_turbo_frame")%>
+<%= turbo_frame_tag frame_id do %>
+  <%= link_to post.title, edit_post_path(post) %>
+  <%= button_to "Delete", post_path(post), method: :delete %>
+<% end %>
